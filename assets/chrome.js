@@ -29,7 +29,7 @@
   var headerHTML =
     '<header class="site-header hero-dark">' +
       '<div class="container">' +
-        '<a class="brand" href="index.html" aria-label="BDD home">' +
+        '<a class="brand" href="/" aria-label="BDD home">' +
           '<span class="brand__mark">' + MARK + '</span>' +
           '<span class="brand__name">' +
             '<span class="brand__word">BDD</span>' +
@@ -53,7 +53,7 @@
       navLinks("") +
       '<div class="mobile-cta">' +
         '<a class="btn btn-gold" href="' + TEL + '"><span class="th">โทรเลย ' + PHONE + '</span><span class="en">Call ' + PHONE + '</span></a>' +
-        '<a class="btn btn-ghost" href="contact.html"><span class="th">ขอใบเสนอราคาฟรี</span><span class="en">Free Quote</span></a>' +
+        '<a class="btn btn-ghost" href="/contact"><span class="th">ขอใบเสนอราคาฟรี</span><span class="en">Free Quote</span></a>' +
       '</div>' +
     '</nav>';
 
@@ -62,7 +62,7 @@
       '<div class="container">' +
         '<div class="footer-top">' +
           '<div class="footer-col">' +
-            '<a class="brand" href="index.html">' +
+            '<a class="brand" href="/">' +
               '<span class="brand__mark">' + MARK + '</span>' +
               '<span class="brand__name"><span class="brand__word">BDD</span><span class="brand__sub">Development &amp; Design</span></span>' +
             '</a>' +
@@ -74,18 +74,18 @@
           '<div class="footer-col">' +
             '<h5><span class="th">เมนู</span><span class="en">Explore</span></h5>' +
             '<ul>' +
-              '<li><a href="services.html"><span class="th">บริการของเรา</span><span class="en">Services</span></a></li>' +
-              '<li><a href="portfolio.html"><span class="th">ผลงาน</span><span class="en">Portfolio</span></a></li>' +
-              '<li><a href="about.html"><span class="th">เกี่ยวกับเรา</span><span class="en">About</span></a></li>' +
-              '<li><a href="knowledge.html"><span class="th">เกร็ดความรู้</span><span class="en">Insights</span></a></li>' +
+              '<li><a href="/services"><span class="th">บริการของเรา</span><span class="en">Services</span></a></li>' +
+              '<li><a href="/portfolio"><span class="th">ผลงาน</span><span class="en">Portfolio</span></a></li>' +
+              '<li><a href="/about"><span class="th">เกี่ยวกับเรา</span><span class="en">About</span></a></li>' +
+              '<li><a href="/knowledge"><span class="th">เกร็ดความรู้</span><span class="en">Insights</span></a></li>' +
             '</ul>' +
           '</div>' +
           '<div class="footer-col">' +
             '<h5><span class="th">บริการ</span><span class="en">Services</span></h5>' +
             '<ul>' +
-              '<li><a href="services.html"><span class="th">ที่ปรึกษางานก่อสร้าง</span><span class="en">Consulting</span></a></li>' +
-              '<li><a href="services.html"><span class="th">ออกแบบสถาปัตย์ & โครงสร้าง</span><span class="en">Design</span></a></li>' +
-              '<li><a href="services.html"><span class="th">ก่อสร้าง & ตกแต่งภายใน</span><span class="en">Build & Interior</span></a></li>' +
+              '<li><a href="/services"><span class="th">ที่ปรึกษางานก่อสร้าง</span><span class="en">Consulting</span></a></li>' +
+              '<li><a href="/services"><span class="th">ออกแบบสถาปัตย์ & โครงสร้าง</span><span class="en">Design</span></a></li>' +
+              '<li><a href="/services"><span class="th">ก่อสร้าง & ตกแต่งภายใน</span><span class="en">Build & Interior</span></a></li>' +
             '</ul>' +
           '</div>' +
           '<div class="footer-col">' +
