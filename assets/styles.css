@@ -281,7 +281,7 @@ html[data-lang="en"] .th { display: none !important; }
 }
 .hero .container { position: relative; z-index: 2; padding-top: var(--nav-h); }
 .hero__inner { max-width: 760px; }
-.hero__title { font-size: var(--fs-display); font-weight: 600; line-height: 1.06; color: #fff; margin-top: 22px; }
+.hero__title { font-size: clamp(1.9rem, 4.35vw, 3.65rem); font-weight: 600; line-height: 1.12; color: #fff; margin-top: 22px; }
 .hero__title em { font-family: var(--font-mark); font-style: italic; font-weight: 600; color: var(--gold-bright); }
 .hero__lead { font-size: var(--fs-lead); margin-top: 26px; max-width: 540px; color: rgba(246,241,232,0.92); }
 .hero__cta { margin-top: 38px; }
