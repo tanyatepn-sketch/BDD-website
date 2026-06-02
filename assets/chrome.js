@@ -15,7 +15,7 @@
 
   var PHONE = "081-974-4162";
   var TEL = "tel:0819744162";
-  var LINE = "https://line.me/";
+  var LINE = "https://line.me/ti/p/HpQmu_HZs4";
 
   function navLinks(cls) {
     var items = [
