@@ -6,12 +6,7 @@
 (function () {
   "use strict";
 
-  var MARK =
-    '<svg viewBox="0 0 32 32" fill="none" aria-hidden="true">' +
-    '<path d="M5 26 V14 L16 6 L27 14 V26" stroke="#b8924a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>' +
-    '<path d="M13 26 V18 H19 V26" stroke="#b8924a" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>' +
-    '<line x1="5" y1="26" x2="27" y2="26" stroke="#b8924a" stroke-width="1.4" stroke-linecap="round"/>' +
-    '</svg>';
+  var MARK = '<img src="assets/img/LOGO-BDD-W.png" alt="BDD" />';
 
   var PHONE = "081-974-4162";
   var TEL = "tel:0819744162";
