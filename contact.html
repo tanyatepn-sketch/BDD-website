@@ -52,6 +52,10 @@
             </div>
           </div>
           <div class="info-row">
+            <span class="ir-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+            <div><div class="info-row__label"><span class="th">อีเมล</span><span class="en">Email</span></div><div class="info-row__value"><a href="mailto:bdddesign@hotmail.com">bdddesign@hotmail.com</a></div></div>
+          </div>
+          <div class="info-row">
             <span class="ir-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
             <div><div class="info-row__label"><span class="th">ที่อยู่สำนักงาน</span><span class="en">Office</span></div><div class="info-row__value">95/8 หมู่ 1 ต.คลองหนึ่ง<br />อ.คลองหลวง จ.ปทุมธานี 12120</div></div>
           </div>
@@ -74,7 +78,14 @@
           </div>
           <h3 class="h3" style="font-size:1.5rem; margin-bottom:6px;"><span class="th">ขอใบเสนอราคา / ปรึกษาฟรี</span><span class="en">Request a free quote</span></h3>
           <p class="muted" style="margin-bottom:24px; font-size:.95rem;"><span class="th">กรอกข้อมูลสั้นๆ เกี่ยวกับโครงการของคุณ</span><span class="en">Tell us a little about your project.</span></p>
-          <form data-contact-form>
+          <form data-contact-form action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms config -->
+            <input type="hidden" name="access_key" value="7fe4fbaa-518f-4540-921f-c3b7871e8e21" />
+            <input type="hidden" name="subject" value="ขอใบเสนอราคา/ปรึกษา จากเว็บไซต์ BDD" />
+            <input type="hidden" name="from_name" value="BDD Website Contact Form" />
+            <input type="hidden" name="redirect" value="false" />
+            <!-- Honeypot anti-spam -->
+            <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
             <div class="field-row">
               <div class="field"><label><span class="th">ชื่อ–นามสกุล</span><span class="en">Full name</span> <span class="req">*</span></label><input type="text" name="name" required data-ph-th="กรอกชื่อของคุณ" data-ph-en="Your name" /></div>
               <div class="field"><label><span class="th">เบอร์โทร</span><span class="en">Phone</span> <span class="req">*</span></label><input type="tel" name="phone" required data-ph-th="08X-XXX-XXXX" data-ph-en="08X-XXX-XXXX" /></div>

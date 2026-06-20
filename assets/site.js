@@ -136,16 +136,41 @@
       document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
     }
 
-    /* ---------- contact form (demo) ---------- */
+    /* ---------- contact form (Web3Forms) ---------- */
     var form = document.querySelector("[data-contact-form]");
     if (form) {
       form.addEventListener("submit", function (e) {
         e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
         var ok = form.querySelector(".form-success");
-        if (ok) { ok.classList.add("show"); }
-        form.reset();
-        if (ok && ok.scrollIntoView) { /* avoid scrollIntoView per guidance */ }
-        window.scrollTo({ top: form.getBoundingClientRect().top + window.scrollY - 120, behavior: "smooth" });
+        var originalBtnHTML = btn ? btn.innerHTML : "";
+        if (btn) { btn.disabled = true; btn.innerHTML = "กำลังส่ง..."; }
+
+        var formData = new FormData(form);
+        // Tag the source page in the email
+        formData.append("page_url", window.location.href);
+
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: { "Accept": "application/json" }
+        })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data && data.success) {
+            if (ok) { ok.classList.add("show"); }
+            form.reset();
+            window.scrollTo({ top: form.getBoundingClientRect().top + window.scrollY - 120, behavior: "smooth" });
+          } else {
+            alert("ส่งข้อความไม่สำเร็จ กรุณาลองใหม่ หรือโทร 081-974-4162\n\n" + (data && data.message ? data.message : ""));
+          }
+        })
+        .catch(function () {
+          alert("เกิดข้อผิดพลาดในการเชื่อมต่อ กรุณาลองใหม่ หรือโทร 081-974-4162");
+        })
+        .finally(function () {
+          if (btn) { btn.disabled = false; btn.innerHTML = originalBtnHTML; }
+        });
       });
     }
 
