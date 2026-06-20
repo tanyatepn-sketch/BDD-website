@@ -146,14 +146,30 @@
         var originalBtnHTML = btn ? btn.innerHTML : "";
         if (btn) { btn.disabled = true; btn.innerHTML = "กำลังส่ง..."; }
 
-        var formData = new FormData(form);
-        // Tag the source page in the email
-        formData.append("หน้าที่กรอก", window.location.href);
+        // Build JSON payload with Thai labels (Web3Forms supports JSON natively, UTF-8 safe)
+        var fd = new FormData(form);
+        var typeSel = form.querySelector('select[name="type"]');
+        var typeText = typeSel ? (typeSel.options[typeSel.selectedIndex] ? typeSel.options[typeSel.selectedIndex].text : fd.get("type")) : fd.get("type");
+        var payload = {
+          access_key: fd.get("access_key"),
+          subject: fd.get("subject") || "ขอใบเสนอราคา/ปรึกษา จากเว็บไซต์ BDD",
+          from_name: fd.get("from_name") || "BDD Website",
+          botcheck: fd.get("botcheck") || "",
+          "ชื่อ-นามสกุล": fd.get("name") || "",
+          "เบอร์โทร": fd.get("phone") || "",
+          "อีเมล": fd.get("email") || "",
+          "ประเภทงานที่สนใจ": typeText || "",
+          "รายละเอียดโครงการ": fd.get("message") || "",
+          "หน้าที่กรอกฟอร์ม": window.location.href
+        };
 
         fetch(form.action, {
           method: "POST",
-          body: formData,
-          headers: { "Accept": "application/json" }
+          body: JSON.stringify(payload),
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          }
         })
         .then(function (res) { return res.json(); })
         .then(function (data) {

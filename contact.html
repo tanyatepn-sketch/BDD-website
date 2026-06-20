@@ -87,13 +87,13 @@
             <!-- Honeypot anti-spam -->
             <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
             <div class="field-row">
-              <div class="field"><label><span class="th">ชื่อ–นามสกุล</span><span class="en">Full name</span> <span class="req">*</span></label><input type="text" name="ชื่อ-นามสกุล" required data-ph-th="กรอกชื่อของคุณ" data-ph-en="Your name" /></div>
-              <div class="field"><label><span class="th">เบอร์โทร</span><span class="en">Phone</span> <span class="req">*</span></label><input type="tel" name="เบอร์โทร" required data-ph-th="08X-XXX-XXXX" data-ph-en="08X-XXX-XXXX" /></div>
+              <div class="field"><label><span class="th">ชื่อ–นามสกุล</span><span class="en">Full name</span> <span class="req">*</span></label><input type="text" name="name" required data-ph-th="กรอกชื่อของคุณ" data-ph-en="Your name" /></div>
+              <div class="field"><label><span class="th">เบอร์โทร</span><span class="en">Phone</span> <span class="req">*</span></label><input type="tel" name="phone" required data-ph-th="08X-XXX-XXXX" data-ph-en="08X-XXX-XXXX" /></div>
             </div>
-            <div class="field"><label><span class="th">อีเมล</span><span class="en">Email</span></label><input type="email" name="อีเมล" data-ph-th="you@email.com" data-ph-en="you@email.com" /></div>
+            <div class="field"><label><span class="th">อีเมล</span><span class="en">Email</span></label><input type="email" name="email" data-ph-th="you@email.com" data-ph-en="you@email.com" /></div>
             <div class="field">
               <label><span class="th">ประเภทงานที่สนใจ</span><span class="en">Project type</span></label>
-              <select name="ประเภทงาน">
+              <select name="type">
                 <option data-th="ออกแบบบ้าน / ที่พักอาศัย" data-en="House / residence design">ออกแบบบ้าน / ที่พักอาศัย</option>
                 <option data-th="ตกแต่งภายใน" data-en="Interior design">ตกแต่งภายใน</option>
                 <option data-th="รับเหมาก่อสร้าง" data-en="Construction">รับเหมาก่อสร้าง</option>
@@ -102,7 +102,7 @@
                 <option data-th="ขอคำปรึกษา / อื่นๆ" data-en="Consultation / other">ขอคำปรึกษา / อื่นๆ</option>
               </select>
             </div>
-            <div class="field"><label><span class="th">รายละเอียดโครงการ</span><span class="en">Project details</span></label><textarea name="รายละเอียดโครงการ" data-ph-th="เล่าเกี่ยวกับโครงการ งบประมาณ หรือพื้นที่ของคุณ..." data-ph-en="Tell us about your project, budget or site..."></textarea></div>
+            <div class="field"><label><span class="th">รายละเอียดโครงการ</span><span class="en">Project details</span></label><textarea name="message" data-ph-th="เล่าเกี่ยวกับโครงการ งบประมาณ หรือพื้นที่ของคุณ..." data-ph-en="Tell us about your project, budget or site..."></textarea></div>
             <button type="submit" class="btn btn-primary btn-lg" style="width:100%;"><span class="th">ส่งข้อความ</span><span class="en">Send message</span></button>
             <p class="form-note"><span class="th">หรือโทรหาเราโดยตรงที่ 081-974-4162 — เราพร้อมให้คำปรึกษาฟรี</span><span class="en">Or call us directly at 081-974-4162 — free consultation.</span></p>
           </form>
